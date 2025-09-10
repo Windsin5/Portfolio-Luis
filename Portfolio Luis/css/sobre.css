@@ -1,0 +1,124 @@
+#82AFFF
+#4169E1
+#002366
+#000032
+#000019
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #002366;
+    font-family: "Oswald", sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.navegação{
+    display: flex;
+    color: antiquewhite;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.3rem;
+    height: 5rem;
+    gap: 6rem;
+    border-radius: 5px;
+    outline-width: 1rem;
+    outline-style: solid;          /*Define como linha solida, faz a sombra do nav */
+    outline-color: #000019;     /*cor da sombra */
+}
+.botao-nav{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sidebar{
+    background-color: #4169E1;
+    position: absolute; /*define como a caixa que sobrepoe*/
+    top: 6rem;
+    left: 0;
+    width: 20vw;
+    height: 90%;
+    border-top-right-radius: 4rem;
+}
+.fundo{
+    background-color: #000019;
+    position: relative; /*define como a caixa a ser sobreposta, faz a sombra*/
+    height: 100%;
+    border-top-right-radius: 4rem;
+    width: 20vw;
+    left: 1.5rem;
+    top: -1.2rem;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+    min-width: 50%;
+}
+#retrato{
+    position: absolute;
+    background-color: #82AFFF;
+
+    
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    margin: 4rem;
+    min-width: 5rem;
+    max-width: 15rem;
+}
+.Letterbox{
+    position: relative;
+    width: 30vw;
+    height: 6.5rem;
+    background-color: #4169E1;
+    border-radius: 4rem;
+    padding: 0;
+    left: 50rem;
+    
+}
+.Letterbox h1{
+    color: antiquewhite;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    font-size: 4rem;
+}
+    
+#caixa-texto{
+    position: relative;
+    background-color: #82AFFF;
+    text-align: justify;
+    color: antiquewhite;
+    
+    border-radius: 4rem;
+    left: 20rem;
+    margin-right: 25rem;
+    margin-left: 15rem;
+    
+}
+#caixa-texto p{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 2.2rem;
+}
