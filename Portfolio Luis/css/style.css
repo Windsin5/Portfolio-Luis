@@ -1,136 +1,266 @@
-/*#82AFFF
+/*
+#82AFFF
 #4169E1
 #002366
 #000032
-#000019*/
+#000019
+*/
 
-*{
-     
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
+:root {
+    --cor-fundo-principal: #002366;
+    --cor-fundo-escuro: #000019;
+    --cor-texto: #333;
+    --cor-destaque: #4169E1;
+    --cor-card: #fff;
+    --sombra-card: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-    
 }
-a{
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.destaque {
+    color: var(--cor-destaque);
+}
+
+a {
     text-decoration: none;
-    color: antiquewhite;
+    color: #fff;
+    font-size: 1.2rem;
 }
-.texto{
-    position: relative;
-    color: antiquewhite;
-    z-index: 3;
+
+/* Estilo do Cabeçalho e Navegação */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    background-color: #000032;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
     font-size: 2rem;
-    bottom: 22rem;
-    left: 10rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
 }
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color: #002366;
-    font-family: "Oswald", sans-serif;
-    height: 100%;
-    width: 100%;
+
+.navegacao a {
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: color 0.3s;
 }
-.navegação{
+
+.navegacao a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Seções de Conteúdo */
+section {
+    padding: 5rem;
+}
+
+.secao-hero {
     display: flex;
-    color: antiquewhite;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    font-size: 1.3rem;
-    height: 5rem;
-    gap: 6rem;
+    background-color: var(--cor-fundo-escuro);
+    color: #fff;
+    padding: 5rem 10rem;
+    gap: 4rem;
+}
+
+.conteudo-hero {
+    max-width: 50%;
+}
+
+.conteudo-hero h1 {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.conteudo-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.imagem-hero img {
+    width: 300px;
+    height: auto;
     border-radius: 5px;
-    outline-width: 1rem;
-    outline-style: solid;          /*Define como linha solida, faz a sombra do nav */
-    outline-color: #000019;     /*cor da sombra */
 }
-.botao-nav{
-    font-size: 1.5rem;
-    font-weight: bold;
+
+/* Seção de Habilidades */
+.secao-habilidades h2 {
+    margin-top: 0;
 }
-#container{
+
+.grid-habilidades {
     display: flex;
-    position: absolute;
-    flex-direction: row;
+    gap: 2rem;
     justify-content: center;
+}
+
+.card {
+    background-color: var(--cor-card);
+    border-radius: 1rem;
+    box-shadow: var(--sombra-card);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 300px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* Seção de Projetos */
+.secao-projetos {
+    text-align: center;
+}
+
+.grid-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card-projeto {
+    display: flex;
+    background-color: var(--cor-card);
+    border-radius: 1rem;
+    box-shadow: var(--sombra-card);
+    padding: 2rem;
+    max-width: 800px;
+    gap: 2rem;
     align-items: center;
 }
-.Letterbox{
-    display: flexbox;
-    position: center;
-    height: 6.5rem;
-    background-color: #4169E1;
-    border-radius: 4rem;
-    padding-left:  9rem;
-    padding-right: 9rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    white-space: nowrap;
-    justify-content: right;
-    align-items: right;
-}
-.Letterbox h1{
-    color: antiquewhite;
-    font-size: 4rem;
-    padding-top: 1rem;
-}
-#Letterbox-fundo{
-    position:relative;
-    background-color: #000019;
-    height: 6.5rem;
-    border-radius: 4rem;
-    bottom: 7rem;
-    right: 3rem;
-    white-space: nowrap;
-    z-index: -1;
-}
-.caixa{
-    position: relative;
-    background-color: #4169E1;
-    height: 12rem;
-    border-radius: 2rem;
-    top: 4rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 4rem;
-}
-.caixa-fundo{
-    position: relative;
-    background-color: #82AFFF;
-    height: 12rem;
-    border-radius: 2rem;
-    top: 1rem;
-    left: -0.5rem;
-    z-index: -1;
-}
-#spotify{
-    position: relative;
-    max-width: 85%;
-    max-height: 85%;
-    width: auto;
+
+.imagem-projeto img {
+    width: 200px;
     height: auto;
-    z-index: 1;
-    bottom: 11rem;
-    left: -3rem;
 }
-#caixa-texto{
-    position: center;
-    background-color: #82AFFF;
-    text-align: justify;
-    color: antiquewhite;
+
+.conteudo-projeto {
+    text-align: left;
+}
+
+.conteudo-projeto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.conteudo-projeto p {
+    margin-bottom: 1.5rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #e56200;
+}
+
+/* Seção de Contato */
+.secao-contato h2 {
+    margin-bottom: 3rem;
+}
+
+.grid-contato {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.card-contato {
+    background-color: var(--cor-card);
+    border-radius: 1rem;
+    box-shadow: var(--sombra-card);
+    padding: 2rem;
+}
+.card-contato a{
+    color: #333;
+}
+
+/* Rodapé */
+.footer {
     display: flex;
-    border-radius: 4rem;
-    left: 20rem;
-    margin-right: 25rem;
-    margin-left: 15rem;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    border-top: 1px solid #eee;
+    background-color: #82AFFF;
+    font-size: 0.9rem;
 }
-#caixa-texto p{
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    font-size: 2.2rem;
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navegacao a {
+        margin: 0 0.5rem;
+    }
+    
+    .secao-hero, .card-projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .conteudo-hero {
+        max-width: 100%;
+    }
+
+    .grid-habilidades, .grid-contato {
+        flex-direction: column;
+    }
+
+    .card, .card-contato {
+        max-width: 100%;
+    }
+
+    .grid-contato {
+        grid-template-columns: 1fr;
+    }
 }
