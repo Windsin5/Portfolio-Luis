@@ -112,7 +112,7 @@ section {
 .imagem-hero img {
     width: 300px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10rem;
 }
 
 /* Seção de Habilidades */
@@ -166,11 +166,6 @@ section {
     max-width: 800px;
     gap: 2rem;
     align-items: center;
-}
-
-.imagem-projeto img {
-    width: 200px;
-    height: auto;
 }
 
 .conteudo-projeto {
